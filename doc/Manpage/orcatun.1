@@ -1,0 +1,45 @@
+.\" Process this file with
+.\" groff -man -Tascii foo.1
+.\"
+.TH  1 "JUNE 2016 ORCATUN USER MANUAL"
+.SH ORCATUN
+Orcatun \- Ultrasonic Networking
+.SH SYNOPSIS
+.B orcatun [OPTIONS]
+.SH DESCRIPTION
+.B Orcatun
+enables the User to send Network Packets using Ultrasound. It takes all Traffic to a specified IP and 
+sends it out as Sound. At the same Time, it also listens for Traffic from another Computer running Orcatun.
+.SH OPTIONS
+.IP "-v verbose Output"
+Print more Info on what is happening.
+.IP "-c config-file"
+Use an alternate
+.I config-file
+instead of
+.IR /etc/orcatun/orcatun.conf .
+Options specified on the Commandline overwrite those in the Config
+.IP "-s Sampling Rate"
+Specify the Sampling Rate
+.IP "-r receive Frequency"
+Specfify the Frequency to listen on
+.IP "-t transmit Frequency"
+Specfify the Frequency to transmit on
+.IP "-d Destination IP"
+Specify the Remote IP Address
+.IP "-l Local IP"
+Specify the Local IP Address
+.IP "-n Name"
+Specify the Name to be used for the Tun-Device
+
+.SH FILES
+.I /etc/orcatun/orcatun.conf
+.RS
+The system wide default configuration file.
+.RE
+.SH AUTHOR
+SEP Group ISS-1 <https://www.tu-braunschweig.de/sec>
+.SH "SEE ALSO"
+.BR netcat (1),
+.BR ssh (1)
+.BR ping (8),

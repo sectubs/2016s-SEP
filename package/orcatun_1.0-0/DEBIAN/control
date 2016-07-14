@@ -1,0 +1,10 @@
+Package: orcatun
+Version: 1.0-1
+Section: misc
+Priority: extra
+Architecture: all
+Depends: swig, gnuradio
+Installed-Size: 8
+Maintainer: Dude
+Homepage: github.com/sectubs/2016s-SEP
+Description: OrcaTUN provides a network tunnel over ultra sonic sound.

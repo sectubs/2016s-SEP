@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Frame Encoder
+###################################################
+ -->
+<block>
+  <name>Frame Encoder</name>
+  <key>orcatun_frame_encoder</key>
+  <category>orcatun</category>
+  <import>import orcatun</import>
+  <make>orcatun.frame_encoder($len_tag_key, $enable_crc)</make>
+  <param>
+    <name>Length Tag Key</name>
+    <key>len_tag_key</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Enable CRC</name>
+    <key>enable_crc</key>
+    <value>True</value>
+    <type>string</type>
+  </param>
+  <param>
+	<name>Enable CRC</name>
+	<key>enable_crc</key>
+	<value>True</value>
+	<type>enum</type>
+	<option>
+		<name>Yes</name>
+		<key>True</key>
+	</option>
+	<option>
+		<name>No</name>
+		<key>False</key>
+	</option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

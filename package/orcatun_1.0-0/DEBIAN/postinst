@@ -1,0 +1,45 @@
+#!/bin/sh
+# postinst script for orcatun
+#
+# see: dh_installdeb(1)
+
+# Install GNU Radio modules
+
+echo "Installing GNU Radio modules"
+cd /usr/share/orcatun/gr-orcatun
+rm -rf build
+mkdir build
+cd build
+cmake ../
+make
+make install
+ldconfig
+
+# Copy important things into python directory
+cd ../..
+
+echo "Installing OrcaTUN files"
+sudo cp tun_handler.py /usr/local/lib/python2.7/dist-packages/orcatun/tun_handler.py
+sudo cp packet_handler.py /usr/local/lib/python2.7/dist-packages/orcatun/packet_handler.py
+sudo cp ot.py /usr/local/lib/python2.7/dist-packages/orcatun/ot.py
+
+
+echo "Create orcatun command"
+sudo ln main.py -s -r -T /usr/bin/orcatun
+sudo chmod 777 /usr/bin/orcatun
+echo "Create gui command"
+sudo ln gui-orcatun.py -s -r -T /usr/bin/orcagui
+sudo chmod 777 /usr/bin/orcagui
+
+echo "Create configuration"
+sudo mkdir /etc/orcatun
+sudo cp example.conf /etc/orcatun/orcatun.conf
+
+echo "Set up manpage"
+sudo cp orcatun.1.gz /usr/share/man/man1/orcatun.1.gz
+
+
+echo "Finished"
+
+echo "Make sure to install python-pytun and dpkt via python pip,"
+echo "and swig."

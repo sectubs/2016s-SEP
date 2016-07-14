@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## Multiply Length PDU
+###################################################
+ -->
+<block>
+  <name>Multiply Length PDU</name>
+  <key>orcatun_multiply_length_pdu</key>
+  <category>orcatun</category>
+  <import>import orcatun</import>
+  <make>orcatun.multiply_length_pdu($len_tag_key)</make>
+  <param>
+    <name>Length Tag Key</name>
+    <key>len_tag_key</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Length Tag Key</name>
+    <key>len_tag_key</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

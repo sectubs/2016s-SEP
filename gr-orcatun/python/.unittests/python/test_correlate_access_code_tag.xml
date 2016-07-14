@@ -1,0 +1,13 @@
+<testsuite errors="1" failures="0" name="unittest.suite.TestSuite" tests="2" time="0.039">
+  <testcase classname="__main__.test_correlate_access_code" name="test_001" time="0.0188">
+    <error type="exceptions.NameError">global name 'top_blockcks' is not defined
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "./qa_correlate_access_code_tag_fixed_bb.py", line 54, in test_001
+    dst = top_blockcks.tag_debug(1, "sync")
+    </error>
+  </testcase>
+  <testcase classname="__main__.test_correlate_access_code" name="test_002" time="0.0200"></testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
