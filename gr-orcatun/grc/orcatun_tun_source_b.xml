@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Tun Source
+###################################################
+ -->
+<block>
+  <name>TUN Source</name>
+  <key>orcatun_tun_source_b</key>
+  <category>orcatun</category>
+  <import>import orcatun</import>
+  <make>orcatun.tun_source_b($tun_name, $len_tag_key, $use_ot_packets)</make>
+  <param>
+    <name>TUN Device Name</name>
+    <key>tun_name</key>
+    <value>"tun3"</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Length Tag Key</name>
+    <key>len_tag_key</key>
+    <value>"packet_len"</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Use OT packets</name>
+    <key>use_ot_packets</key>
+    <value>True</value>
+    <type>enum</type>
+    <option>
+      <name>Yes</name>
+      <key>True</key>
+    </option>
+    <option>
+      <name>No</name>
+      <key>False</key>
+    </option>
+  </param>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>

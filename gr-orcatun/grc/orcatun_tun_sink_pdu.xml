@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+##Tun Sink PDU
+###################################################
+ -->
+<block>
+  <name>TUN Sink (PDU)</name>
+  <key>orcatun_tun_sink_pdu</key>
+  <category>orcatun</category>
+  <import>import orcatun</import>
+  <make>orcatun.tun_sink_pdu($tun_name, $use_ot_packets)</make>
+  <param>
+    <name>TUN Device Name</name>
+    <key>tun_name</key>
+    <value>"tun3"</value>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Use OT packets</name>
+    <key>use_ot_packets</key>
+    <value>True</value>
+    <type>enum</type>
+    <option>
+      <name>Yes</name>
+      <key>True</key>
+    </option>
+    <option>
+      <name>No</name>
+      <key>False</key>
+    </option>
+  </param>
+  <sink>
+    <name>packet</name>
+    <type>message</type>
+  </sink>
+</block>
+  
