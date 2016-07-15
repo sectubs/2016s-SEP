@@ -2,7 +2,7 @@
 A common and easy security network measure is to isolate a senstive computer from outside -- commonly known as an *Air gap*. There is no cable to this computer, no connection, nothing. However, the security team made one mistake, the computer has speakers and a microphone. Mallory, a smart hacker, achieved that OrcaTUN was installed with the operating system before isolating the sensitive computer. She is now able to obtain sensitive information continously by just using *inaudible* sound. Nobody would notice the security breach.
 
 ##OrcaTUN - Ultrasonic Networking
-OrcaTUN -- developed by students of the Institute of System Security -- allows the user to connect to other computers by providing a standard network tunnel via TUN -- of course only for legitimate intentions. Regular applications like Netcat or SSH can communicate with each other just as they would do over the Internet. No special adaptions are necessary. OrcaTUN sends all the traffic to a specified IP through the speakers and in turn receives traffic trough the mircophone. 
+OrcaTUN -- developed by students of the Institute of System Security -- allows the user to connect to other computers by providing a standard *ultrasonic network tunnel via TUN* -- of course only for legitimate intentions. Regular applications like Netcat or SSH can communicate with each other just as they would do over the Internet. No special adaptions are necessary. OrcaTUN sends all the traffic to a specified IP through the speakers and in turn receives traffic trough the mircophone. 
 
 ###Usage
 If you already installed OrcaTun, just open a terminal
